@@ -1,0 +1,7 @@
+{
+  "name": "@muban/eslint-config-root",
+  "private": true,
+  "workspaces": [
+    "configs/base"
+  ]
+}
