@@ -8,4 +8,4 @@ small tweaks, together with the addition of [lit](https://www.npmjs.com/package/
 
 | configuration                                                                               |                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [base](https://github.com/muban/muban-eslint-config/tree/main/packages/eslint-config)   | [![npm version](https://badge.fury.io/js/%40muban%2Feslint-config.svg)](https://badge.fury.io/js/%40muban%2Feslint-config)   |
+| [base](https://github.com/muban/muban-eslint-config/tree/main/configs/eslint-config)   | [![npm version](https://badge.fury.io/js/%40muban%2Feslint-config.svg)](https://badge.fury.io/js/%40muban%2Feslint-config)   |
