@@ -18,6 +18,7 @@ npm i --dev @muban/eslint-config
 **Note for `yarn` users**: `yarn` does not install peer dependencies by default, this can be supplemented with `install-peerdeps`.
 
 ```bash
+npx install-peerdeps --dev --only-peers @mediamonks/eslint-config-base
 npx install-peerdeps --dev @muban/eslint-config
 ```
 
