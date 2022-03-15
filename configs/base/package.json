@@ -3,7 +3,7 @@
   "version": "1.0.0-alpha.5",
   "license": "MIT",
   "keywords": [
-    "MediaMonks",
+    "Media.Monks",
     "Coding",
     "Standards",
     "eslint",
@@ -11,7 +11,7 @@
     "TypeScript",
     "Prettier"
   ],
-  "author": "MediaMonks",
+  "author": "frontend.monks",
   "bugs": {
     "url": "https://github.com/mediamonks/eslint-config/issues"
   },
