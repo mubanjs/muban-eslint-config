@@ -7,33 +7,6 @@ module.exports = {
   rules: {
     // Additions
     '@typescript-eslint/consistent-type-imports': ['error'],
-    '@typescript-eslint/naming-convention': [
-      'error',
-      {
-        selector: 'default',
-        format: ['strictCamelCase'],
-        leadingUnderscore: 'forbid',
-        trailingUnderscore: 'forbid',
-      },
-      {
-        selector: 'typeLike',
-        format: ['StrictPascalCase'],
-      },
-      {
-        selector: 'variable',
-        // Exception for FunctionComponents
-        format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE'],
-      },
-      {
-        selector: 'function',
-        // Exception for FunctionComponents
-        format: ['strictCamelCase', 'StrictPascalCase'],
-      },
-      {
-        selector: 'enumMember',
-        format: ['StrictPascalCase'],
-      },
-    ],
     'lit/no-legacy-template-syntax': 'off',
     'lit/no-private-properties': 'off',
     'lit/no-property-change-update': 'off',
@@ -41,4 +14,43 @@ module.exports = {
     'lit/binding-positions': 'off',
     'lit/no-invalid-html': 'off',
   },
+  overrides: [
+    {
+      files: ['*.stories.ts', '*.test.ts'],
+      rules: {
+        '@typescript-eslint/naming-convention': [
+          'error',
+          {
+            selector: 'default',
+            format: ['strictCamelCase'],
+            leadingUnderscore: 'forbid',
+            trailingUnderscore: 'forbid',
+          },
+          {
+            selector: 'objectLiteralProperty',
+            modifiers: ['requiresQuotes'],
+            format: null,
+          },
+          {
+            selector: 'typeLike',
+            format: ['StrictPascalCase'],
+          },
+          {
+            selector: 'variable',
+            // Exception for FunctionComponents
+            format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE'],
+          },
+          {
+            selector: 'variable',
+            modifiers: ['exported'],
+            format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE'],
+          },
+          {
+            selector: 'enumMember',
+            format: ['StrictPascalCase'],
+          },
+        ],
+      },
+    },
+  ],
 };
