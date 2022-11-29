@@ -2,6 +2,7 @@
   "name": "@muban/eslint-config-root",
   "private": true,
   "workspaces": [
-    "configs/base"
+    "configs/base",
+    "configs/test-base"
   ]
 }

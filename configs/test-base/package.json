@@ -1,0 +1,25 @@
+{
+  "name": "@muban/test-base",
+  "private": true,
+  "scripts": {
+    "eslint": "eslint ./**/*.ts",
+    "eslint:fix": "eslint ./**/*.ts --fix"
+  },
+  "dependencies": {
+    "@muban/eslint-config": "*",
+    "eslint": "^8.28.0"
+  },
+  "eslintConfig": {
+    "extends": "@muban/eslint-config",
+    "parserOptions": {
+      "project": "./tsconfig.json",
+      "tsconfigRootDir": "./"
+    },
+    "rules": {
+      "@typescript-eslint/parameter-properties": [
+        "error",
+        { "allow": [], "prefer": "parameter-property" }
+      ]
+    }
+  }
+}
