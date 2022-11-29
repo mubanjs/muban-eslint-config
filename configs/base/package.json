@@ -24,11 +24,11 @@
     "index.js"
   ],
   "dependencies": {
-    "@mediamonks/eslint-config-base": "^2.2.1"
+    "@mediamonks/eslint-config-typescript": "^1.0.6"
   },
   "peerDependencies": {
     "eslint-plugin-lit": "^1.6.1",
-    "eslint-plugin-lit-a11y": "^2.2.0"
+    "eslint-plugin-lit-a11y": "^2.3.0"
   },
   "publishConfig": {
     "access": "public"

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/naming-convention */
+
 const Foo = 'fake-component';
 
 function Bar (baz: unknown): void {
@@ -6,3 +8,5 @@ function Bar (baz: unknown): void {
 }
 
 Bar(Foo);
+
+export const Baz = 'fake-component';
