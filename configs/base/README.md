@@ -24,8 +24,8 @@ npx install-peerdeps --dev @muban/eslint-config
 
 ## Usage
 
-Now you can add `@muban/eslint-config` to your `.eslintrc`. Adding `parserOptions.project` is only required if 
-your project is using TypeScript.
+Now you can add `@muban/eslint-config` to your `.eslintrc`.
+
 
 ```json5
 {
@@ -34,5 +34,18 @@ your project is using TypeScript.
     "project": "./tsconfig.json" // can also be an array, if multiple `tsconfig.json` are present
   }
 }
+```
 
+> Adding `parserOptions.project` is only required if your project is using TypeScript.
+
+Or directly in your `.package.json`:
+```json
+{
+  "eslintConfig": {
+    "extends": "@muban/eslint-config",
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    }
+  }
+}
 ```

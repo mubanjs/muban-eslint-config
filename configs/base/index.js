@@ -22,43 +22,62 @@ const namingConventionOptions = [
   },
 ]
 
+const jsRuleChanges = {
+  'unicorn/prevent-abbreviations': [
+    'error',
+    {
+      checkShorthandImports: false,
+      allowList: { fn: true },
+      replacements: {
+        ref: false,
+        refs: false,
+        params: false,
+        param: false,
+        props: false,
+        prop: false,
+      },
+    },
+  ],
+}
+
 module.exports = {
   extends: [
-    '@mediamonks/eslint-config-typescript',
     'plugin:lit/recommended',
     'plugin:lit-a11y/recommended',
   ],
   rules: {
-    // Additions
-    '@typescript-eslint/consistent-type-imports': ['error'],
     'lit/no-legacy-template-syntax': 'off',
     'lit/no-private-properties': 'off',
     'lit/no-property-change-update': 'off',
     'lit/no-template-map': 'off',
     'lit/binding-positions': 'off',
     'lit/no-invalid-html': 'off',
-    // Changes
-    '@typescript-eslint/naming-convention': [
-      'error',
-      ...namingConventionOptions,
-    ],
-    'unicorn/prevent-abbreviations': [
-      'error',
-      {
-        checkShorthandImports: false,
-        allowList: { fn: true },
-        replacements: {
-          ref: false,
-          refs: false,
-          params: false,
-          param: false,
-          props: false,
-          prop: false,
-        },
-      },
-    ],
   },
   overrides: [
+    {
+      files: ['*.js'],
+      extends: [
+        '@mediamonks/eslint-config'
+      ],
+      rules: {
+        ...jsRuleChanges,
+      },
+    },
+    {
+      files: ['*.ts'],
+      extends: [
+        '@mediamonks/eslint-config',
+        '@mediamonks/eslint-config-typescript'
+      ],
+      rules: {
+        ...jsRuleChanges,
+        '@typescript-eslint/consistent-type-imports': ['error'],
+        '@typescript-eslint/naming-convention': [
+          'error',
+          ...namingConventionOptions,
+        ],
+      }
+    },
     {
       files: ['*.stories.ts', '*.test.ts'],
       rules: {
